@@ -1,0 +1,16 @@
+ros-hydro-ueye-cam (1.0.2-0quantal) quantal; urgency=high
+
+  * switched from rosdep 'opencv2' to 'vision_opencv'
+  * Contributors: Anqi Xu
+
+ -- Anqi Xu <anqixu@cim.mcgill.ca>  Thu, 16 Oct 2014 04:00:00 -0000
+
+ros-hydro-ueye-cam (1.0.1-0quantal) quantal; urgency=high
+
+  * Package now attempts to auto-install IDS uEye drivers; prints more useful info for IS_TIMED_OUT errors
+  * First attempt at debian-packaging
+  * Contributors: Anqi Xu, Dirk Thomas, Juan Camilo Gamboa Higuera, Kei Okada, Yutaka Kondo
+
+ -- Anqi Xu <anqixu@cim.mcgill.ca>  Thu, 16 Oct 2014 04:00:00 -0000
+
+
