@@ -1,3 +1,24 @@
+## ueye_cam (hydro) - 1.0.4-0
+
+The packages in the `ueye_cam` repository were released into the `hydro` distro by running `/usr/bin/bloom-release ueye_cam --track hydro --rosdistro hydro` on `Mon, 01 Dec 2014 19:51:33 -0000`
+
+The `ueye_cam` package was released.
+
+Version of package(s) in repository `ueye_cam`:
+- upstream repository: https://github.com/anqixu/ueye_cam.git
+- release repository: https://github.com/anqixu/ueye_cam-release.git
+- rosdistro version: `1.0.3-0`
+- old version: `1.0.3-0`
+- new version: `1.0.4-0`
+
+Versions of tools used:
+- bloom version: `0.5.14`
+- catkin_pkg version: `0.2.6`
+- rosdep version: `0.10.33`
+- rosdistro version: `0.3.6`
+- vcstools version: `0.1.35`
+
+
 ## ueye_cam (hydro) - 1.0.3-0
 
 The packages in the `ueye_cam` repository were released into the `hydro` distro by running `/usr/bin/bloom-release ueye_cam --track hydro --rosdistro hydro` on `Wed, 05 Nov 2014 19:59:09 -0000`
