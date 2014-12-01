@@ -2,6 +2,11 @@
 Changelog for package ueye_cam
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+1.0.4 (2014-12-01)
+------------------
+* Switching to DownloadUEyeDriversUnofficial.cmake (based on ueye ROS package) until IDS grants official permission
+* Contributors: Anqi Xu
+
 1.0.3 (2014-11-05)
 ------------------
 * Dependency switch from 'vision_opencv' meta-package to 'cv_bridge' package
