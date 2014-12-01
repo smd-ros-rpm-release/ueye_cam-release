@@ -1,0 +1,12 @@
+Source: ros-hydro-ueye-cam
+Section: misc
+Priority: extra
+Maintainer: Anqi Xu <anqixu@cim.mcgill.ca>
+Build-Depends: debhelper (>= 9.0.0), ros-hydro-camera-calibration-parsers, ros-hydro-camera-info-manager, ros-hydro-catkin, ros-hydro-cv-bridge, ros-hydro-dynamic-reconfigure, ros-hydro-image-transport, ros-hydro-nodelet, ros-hydro-roscpp, ros-hydro-sensor-msgs
+Homepage: 
+Standards-Version: 3.9.2
+
+Package: ros-hydro-ueye-cam
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-hydro-camera-calibration-parsers, ros-hydro-camera-info-manager, ros-hydro-cv-bridge, ros-hydro-dynamic-reconfigure, ros-hydro-image-transport, ros-hydro-nodelet, ros-hydro-roscpp, ros-hydro-sensor-msgs
+Description: A ROS nodelet and node that wraps the driver API for UEye cameras by IDS Imaging Development Systems GMBH.
