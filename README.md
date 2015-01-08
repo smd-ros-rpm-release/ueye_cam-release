@@ -1,3 +1,24 @@
+## ueye_cam (hydro) - 1.0.8-0
+
+The packages in the `ueye_cam` repository were released into the `hydro` distro by running `/usr/bin/bloom-release ueye_cam --track hydro --rosdistro hydro` on `Thu, 08 Jan 2015 21:14:11 -0000`
+
+The `ueye_cam` package was released.
+
+Version of package(s) in repository `ueye_cam`:
+- upstream repository: https://github.com/anqixu/ueye_cam.git
+- release repository: https://github.com/anqixu/ueye_cam-release.git
+- rosdistro version: `1.0.7-0`
+- old version: `1.0.7-0`
+- new version: `1.0.8-0`
+
+Versions of tools used:
+- bloom version: `0.5.16`
+- catkin_pkg version: `0.2.6`
+- rosdep version: `0.11.0`
+- rosdistro version: `0.4.0`
+- vcstools version: `0.1.36`
+
+
 ## ueye_cam (indigo) - 1.0.8-0
 
 The packages in the `ueye_cam` repository were released into the `indigo` distro by running `/usr/bin/bloom-release ueye_cam --track indigo --rosdistro indigo` on `Thu, 08 Jan 2015 21:13:10 -0000`
