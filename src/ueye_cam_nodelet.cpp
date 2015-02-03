@@ -606,8 +606,12 @@ void UEyeCamNodelet::configCallback(ueye_cam::UEyeCamConfig& config, uint32_t le
       config.white_balance_blue_offset) != IS_SUCCESS) return;
   }
 
-  if (setMirrorUpsideDown(cam_params_.flip_upd) != IS_SUCCESS) return;
-  if (setMirrorLeftRight(cam_params_.flip_lr) != IS_SUCCESS) return;
+  if (config.flip_upd != cam_params_.flip_upd) {
+    if (setMirrorUpsideDown(config.flip_upd) != IS_SUCCESS) return;
+  }
+  if (config.flip_lr != cam_params_.flip_lr) {
+    if (setMirrorLeftRight(config.flip_lr) != IS_SUCCESS) return;
+  }
 
   // NOTE: nothing needs to be done for config.ext_trigger_mode, since frame grabber loop will re-initialize to the right setting
 
@@ -750,15 +754,20 @@ INT UEyeCamNodelet::queryCamParams() {
   cam_params_.blue_gain = is_SetHardwareGain(cam_handle_, IS_GET_BLUE_GAIN,
       IS_IGNORE_PARAMETER, IS_IGNORE_PARAMETER, IS_IGNORE_PARAMETER);
 
-  query = is_SetGainBoost(cam_handle_, IS_GET_GAINBOOST);
-  if (query == IS_SET_GAINBOOST_ON) {
-    cam_params_.gain_boost = true;
-  } else if (query == IS_SET_GAINBOOST_OFF) {
-    cam_params_.gain_boost = false;
+  query = is_SetGainBoost(cam_handle_, IS_GET_SUPPORTED_GAINBOOST);
+  if(query == IS_SET_GAINBOOST_ON) {
+    query = is_SetGainBoost(cam_handle_, IS_GET_GAINBOOST);
+    if (query == IS_SET_GAINBOOST_ON) {
+      cam_params_.gain_boost = true;
+    } else if (query == IS_SET_GAINBOOST_OFF) {
+      cam_params_.gain_boost = false;
+    } else {
+      NODELET_ERROR_STREAM("Failed to query gain boost for UEye camera '" <<
+          cam_name_ << "' (" << err2str(query) << ")");
+      return query;
+    }
   } else {
-    NODELET_ERROR_STREAM("Failed to query gain boost for UEye camera '" <<
-        cam_name_ << "' (" << err2str(query) << ")");
-    return query;
+    cam_params_.gain_boost = false;
   }
 
   if ((is_err = is_SetAutoParameter(cam_handle_,
