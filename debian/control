@@ -1,0 +1,12 @@
+Source: ros-jade-ueye-cam
+Section: misc
+Priority: extra
+Maintainer: Anqi Xu <anqixu@cim.mcgill.ca>
+Build-Depends: debhelper (>= 9.0.0), ros-jade-camera-calibration-parsers, ros-jade-camera-info-manager, ros-jade-catkin, ros-jade-cv-bridge, ros-jade-dynamic-reconfigure, ros-jade-image-transport, ros-jade-nodelet, ros-jade-roscpp, ros-jade-sensor-msgs
+Homepage: 
+Standards-Version: 3.9.2
+
+Package: ros-jade-ueye-cam
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-jade-camera-calibration-parsers, ros-jade-camera-info-manager, ros-jade-cv-bridge, ros-jade-dynamic-reconfigure, ros-jade-image-transport, ros-jade-nodelet, ros-jade-roscpp, ros-jade-sensor-msgs
+Description: A ROS nodelet and node that wraps the driver API for UEye cameras by IDS Imaging Development Systems GMBH.
