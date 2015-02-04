@@ -1,3 +1,24 @@
+## ueye_cam (jade) - 1.0.9-0
+
+The packages in the `ueye_cam` repository were released into the `jade` distro by running `/usr/bin/bloom-release ueye_cam --track jade --rosdistro jade --edit` on `Wed, 04 Feb 2015 19:53:53 -0000`
+
+The `ueye_cam` package was released.
+
+Version of package(s) in repository `ueye_cam`:
+- upstream repository: https://github.com/anqixu/ueye_cam.git
+- release repository: unknown
+- rosdistro version: `null`
+- old version: `null`
+- new version: `1.0.9-0`
+
+Versions of tools used:
+- bloom version: `0.5.17`
+- catkin_pkg version: `0.2.6`
+- rosdep version: `0.11.1`
+- rosdistro version: `0.4.0`
+- vcstools version: `0.1.36`
+
+
 ## ueye_cam (indigo) - 1.0.9-0
 
 The packages in the `ueye_cam` repository were released into the `indigo` distro by running `/usr/bin/bloom-release ueye_cam --track indigo --rosdistro indigo` on `Tue, 03 Feb 2015 23:45:43 -0000`
