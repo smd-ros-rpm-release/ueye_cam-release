@@ -74,8 +74,8 @@ public:
   constexpr static unsigned int RECONFIGURE_RUNNING = 0;
   constexpr static unsigned int RECONFIGURE_STOP = 1;
   constexpr static unsigned int RECONFIGURE_CLOSE = 3;
-  constexpr static int DEFAULT_IMAGE_WIDTH = 640;
-  constexpr static int DEFAULT_IMAGE_HEIGHT = 480;
+  constexpr static int DEFAULT_IMAGE_WIDTH = 640;  // NOTE: these default values do not matter, as they
+  constexpr static int DEFAULT_IMAGE_HEIGHT = 480; // are overwritten by queryCamParams() during connectCam()
   constexpr static double DEFAULT_EXPOSURE = 33.0;
   constexpr static double DEFAULT_FRAME_RATE = 10.0;
   constexpr static int DEFAULT_PIXEL_CLOCK = 25;
@@ -104,6 +104,12 @@ public:
 
 
 protected:
+  /**
+   * Calls UEyeCamDriver::syncCamConfig(), then updates ROS camera info
+   * and ROS image settings.
+   */
+  virtual INT syncCamConfig(std::string dft_mode_str = "mono8");
+
   /**
    * Reads parameter values from currently selected camera.
    */
